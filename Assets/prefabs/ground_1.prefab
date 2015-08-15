@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 489366}
   - 212: {fileID: 21282126}
   - 61: {fileID: 6172864}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0524265468, y: -2.89386177, z: 0}
+  m_LocalPosition: {x: .239999995, y: -2.51999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -36,7 +36,7 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169866}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3ba64818a035d3d468e49734c779e7d2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -.140236735, y: 1.31822252}

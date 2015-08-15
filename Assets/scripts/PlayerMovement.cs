@@ -29,16 +29,9 @@ public class PlayerMovement : MonoBehaviour {
     {
         gcY = (transform.position.y - 0.2F);
         groundCheckPos = new Vector2(transform.position.x, gcY);
-        //grounded = true;
-		//Vector2 groundcheck = transform.position;
-        //grounded = true;
-        //grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+
         grounded = Physics2D.OverlapCircle(groundCheckPos, 0.125F, Ground);
-        
-        //Vector3 pos = transform.position;
-        //pos.z = -10;
-        //Camera.main.transform.position = pos;
-		
+
         if (Input.GetButtonDown("Jump") && grounded)
         {
             jump = true;
@@ -51,7 +44,16 @@ public class PlayerMovement : MonoBehaviour {
 		
 		//anim.SetFloat("Speed", Mathf.Abs(h));
 		
-		rb2d.velocity = new Vector2(moveSpeed * h, rb2d.velocity.y);
+		
+		if(grounded)
+		{
+			rb2d.velocity = new Vector2(moveSpeed * h, rb2d.velocity.y);
+		}
+		else
+		{
+			rb2d.velocity = new Vector2(moveSpeed * h / 2, rb2d.velocity.y);
+		}
+		
 		
 		if(jump)
 		{
