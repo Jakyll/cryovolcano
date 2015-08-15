@@ -4,7 +4,6 @@
 Temp/
 Library/
 game_Data/
-*.exe
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
