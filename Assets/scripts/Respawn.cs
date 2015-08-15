@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Respawn : MonoBehaviour {
 	
-	public int xLimit;
-	public int yLimit;
+	public int xLimit = 5;
+	public int yLimit = 5;
 	Vector2 home = new Vector2(0,0);
 	private Rigidbody2D rb2d;
 	//rb2d = GetComponent<Rigidbody2D>();
