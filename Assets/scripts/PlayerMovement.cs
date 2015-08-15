@@ -8,23 +8,36 @@ public class PlayerMovement : MonoBehaviour {
 
     public float moveSpeed = 1F;
     public float jumpForce = 1000F;
-    public Transform groundCheck;
-
+    public Vector2 groundCheckPos;
+    public LayerMask Ground;
 
     private bool grounded = false;
     private Animator anim;
     private Rigidbody2D rb2d;
+    private float gcY;
 
     void Awake () 
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        
+        
+
     }
     
     void Update () 
     {
-        grounded = true;
-		//grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        gcY = (transform.position.y - 0.2F);
+        groundCheckPos = new Vector2(transform.position.x, gcY);
+        //grounded = true;
+		//Vector2 groundcheck = transform.position;
+        //grounded = true;
+        //grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+        grounded = Physics2D.OverlapCircle(groundCheckPos, 0.2F, Ground);
+        
+        //Vector3 pos = transform.position;
+        //pos.z = -10;
+        //Camera.main.transform.position = pos;
 		
         if (Input.GetButtonDown("Jump") && grounded)
         {
