@@ -87,6 +87,52 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &433367372
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 489366, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .239999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 489366, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.51999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 489366, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 489366, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 489366, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 489366, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 489366, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 489366, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6172864, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 3ba64818a035d3d468e49734c779e7d2, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1220571866
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +217,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1220571869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +294,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.01246214
+  orthographic size: 2.68559504
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -272,7 +318,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!95 &1882943925
 Animator:
   serializedVersion: 3
