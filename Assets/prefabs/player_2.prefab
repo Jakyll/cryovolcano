@@ -8,14 +8,14 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 490872}
-  - 50: {fileID: 5033028}
   - 212: {fileID: 21257674}
-  - 61: {fileID: 6119820}
   - 114: {fileID: 11452534}
   - 114: {fileID: 11455628}
   - 114: {fileID: 11493852}
+  - 50: {fileID: 5085780}
+  - 61: {fileID: 6150466}
   m_Layer: 0
-  m_Name: player_1
+  m_Name: player_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,12 +28,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0399999991, y: 2.41000009, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: .646000028, y: -.474999994, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5033028
+--- !u!50 &5085780
 Rigidbody2D:
   serializedVersion: 2
   m_ObjectHideFlags: 1
@@ -42,14 +42,14 @@ Rigidbody2D:
   m_GameObject: {fileID: 136664}
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0199999996
-  m_GravityScale: 2
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &6119820
+--- !u!61 &6150466
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -61,7 +61,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .159999996, y: .319999993}
+  m_Size: {x: .460000008, y: .5}
 --- !u!114 &11452534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,17 +70,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 136664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 253fee61a92b32e41bf271d0ca73a16a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f0c7f5a998dea74dab64ca3e1c3b846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   facingRight: 1
   jump: 0
-  moveForce: 365
-  maxSpeed: 5
-  jumpForce: 1000
-  groundCheck: {fileID: 450910, guid: 039687be75a394e4cb77f5e1b8e6ec0d, type: 2}
-  grounded: 0
-  rb2d: {fileID: 0}
+  moveSpeed: 10
+  jumpForce: 100
+  groundCheck: {fileID: 0}
 --- !u!114 &11455628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,22 +92,22 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 75
-    i1: 206
-    i2: 196
-    i3: 129
-    i4: 181
-    i5: 94
-    i6: 151
-    i7: 164
-    i8: 72
-    i9: 40
-    i10: 42
-    i11: 137
-    i12: 198
-    i13: 65
-    i14: 220
-    i15: 162
+    i0: 64
+    i1: 86
+    i2: 172
+    i3: 204
+    i4: 214
+    i5: 236
+    i6: 0
+    i7: 52
+    i8: 56
+    i9: 210
+    i10: 181
+    i11: 196
+    i12: 69
+    i13: 231
+    i14: 134
+    i15: 92
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
 --- !u!114 &11493852
@@ -157,8 +154,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9b562da446c9d174bb453fea2d2084df, type: 3}
-  m_Color: {r: 0, g: .847000003, b: .793103456, a: 1}
+  m_Sprite: {fileID: 21300000, guid: e3ec3691de03406429cd11390923d760, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -176,7 +173,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_GravityScale
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: groundCheck
@@ -210,6 +207,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LinearDrag
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: jumpForce
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: gravity
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
