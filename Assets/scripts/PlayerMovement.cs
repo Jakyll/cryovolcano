@@ -35,8 +35,6 @@ public class PlayerMovement : MonoBehaviour {
     void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal");
-
-        anim.SetFloat("Speed", Mathf.Abs(h));
 		
 		rb2d.velocity = new Vector2(moveSpeed * h, rb2d.velocity.y);
 		
