@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour {
 		//Vector2 groundcheck = transform.position;
         //grounded = true;
         //grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-        grounded = Physics2D.OverlapCircle(groundCheckPos, 0.2F, Ground);
+        grounded = Physics2D.OverlapCircle(groundCheckPos, 0.125F, Ground);
         
         //Vector3 pos = transform.position;
         //pos.z = -10;
