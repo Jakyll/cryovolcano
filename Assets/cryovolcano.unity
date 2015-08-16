@@ -126,6 +126,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6172864, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d17974a05223434ca8cb47a3a26f651, type: 2}
   m_IsPrefabParent: 0
@@ -164,13 +168,13 @@ MonoBehaviour:
   m_SendPeerInfo: 0
   m_MaxDelay: .00999999978
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 136664, guid: 4056acccd6ec003438d2b5c445e7865c, type: 2}
+  m_PlayerPrefab: {fileID: 136664, guid: a5a899dc2a2cdc74db0fa8a38deeb1ae, type: 2}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
   m_OfflineScene: cryovolcano
   m_OnlineScene: cryovolcano
   m_SpawnPrefabs:
-  - {fileID: 136664, guid: 4bcec481b55e97a448282a89c641dca2, type: 2}
+  - {fileID: 0}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:
@@ -241,7 +245,6 @@ GameObject:
   - 92: {fileID: 1882943922}
   - 124: {fileID: 1882943921}
   - 81: {fileID: 1882943920}
-  - 95: {fileID: 1882943925}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -290,7 +293,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.68559504
+  orthographic size: 1.23481035
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -315,20 +318,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!95 &1882943925
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1882943919}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 64860a702cd531741b9f29663ed41d87, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1

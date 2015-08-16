@@ -7,22 +7,20 @@ public class PlayerMovement : MonoBehaviour {
     [HideInInspector] public bool jump = false;
 
     public float moveSpeed = 1F;
-    public float jumpForce = 1000F;
-    public Vector2 groundCheckPos;
+    public float jumpForce = 1000F;    
     public LayerMask Ground;
 
-    private bool grounded = false;
     private Animator anim;
     private Rigidbody2D rb2d;
+	
+	private bool grounded = false;
+	private Vector2 groundCheckPos;
     private float gcY;
 
     void Awake () 
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
-        
-        
-
     }
     
     void Update () 
@@ -42,9 +40,6 @@ public class PlayerMovement : MonoBehaviour {
     {
         float h = Input.GetAxis("Horizontal");
 		
-		//anim.SetFloat("Speed", Mathf.Abs(h));
-		
-		
 		if(grounded)
 		{
 			rb2d.velocity = new Vector2(moveSpeed * h, rb2d.velocity.y);
@@ -61,12 +56,26 @@ public class PlayerMovement : MonoBehaviour {
 			jump = false;
 		}
 
-        //if (h * rb2d.velocity.x < maxSpeed)
-		//rb2d.AddForce(Vector2.right * h * moveForce);
+		//================================
+		
+		if(grounded)
+		{
+			if(h != 0)
+			{
+				anim.SetTrigger("Walk");
+			}
+			else
+			{
+				anim.SetTrigger("Idle");
+			}
+		}
+		else
+		{
+			anim.SetTrigger("Fall");
+		}
 
-        //if (Mathf.Abs (rb2d.velocity.x) > maxSpeed)
-        //    rb2d.velocity = new Vector2(Mathf.Sign (rb2d.velocity.x) * maxSpeed, rb2d.velocity.y);
-
+		
+		
         if (h > 0 && !facingRight)
 		{
             Flip ();
@@ -75,12 +84,6 @@ public class PlayerMovement : MonoBehaviour {
 		{
             Flip ();
 		}
-        //if (jump)
-        //{
-            //anim.SetTrigger("Jump");
-        //    rb2d.AddForce(new Vector2(0f, jumpForce));
-        //    jump = false;
-        //}
     }
 
 
